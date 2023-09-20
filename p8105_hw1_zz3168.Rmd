@@ -2,7 +2,7 @@
 title: "p8105_hw1_zz3168"
 author: "Zixuan Zhang"
 date: "2023-09-20"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
