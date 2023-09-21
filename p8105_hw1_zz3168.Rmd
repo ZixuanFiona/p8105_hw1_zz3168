@@ -18,7 +18,7 @@ library(moderndive)
 data("early_january_weather")
 early_january_weather
 ```
-In `early_january_weather` dataset contains information on weather conditions.
+In `early_january_weather` dataset contains information on weather conditions. It contain the origin, year, monrth, day, hour, temperature, dewp, humid, wind_speed, wind_gust, precip, pressure, visib and time_hour value. 
 
 ```{r}
 nrow(early_january_weather)
@@ -26,7 +26,7 @@ ncol(early_january_weather)
 mean(early_january_weather$temp)
 ```
 
-the data set consists of `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns, and the The mean temperature in this dataset is `r mean(early_january_weather$temp)` degrees.
+The data set consists of `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns, and the The mean temperature in this dataset is `r mean(early_january_weather$temp)` degrees.
 
 
 #Make a scatterplot
@@ -41,10 +41,11 @@ ggplot(early_january_weather,
   
   ggsave("scatterplot.pdf")
 ```
+So in the `scatterplot.pdf`  we can see the pattern of temperature changes over time and the relationship between temperature and humidity.
 
 # Problem 2
 
-#create a data frames
+#Create a data frames
 ```{r}
 AA_data_frame = tibble(
   vec_numeric = rnorm(10),
@@ -55,7 +56,7 @@ AA_data_frame = tibble(
 AA_data_frame
 ```
 
-#pull
+#Pull
 
 ```{r}
 library(tidyverse)
