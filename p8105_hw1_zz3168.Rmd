@@ -18,7 +18,7 @@ library(moderndive)
 data("early_january_weather")
 early_january_weather
 ```
-In `early_january_weather` dataset contains information on weather conditions. It contain the origin, year, monrth, day, hour, temperature, dewp, humid, wind_speed, wind_gust, precip, pressure, visib and time_hour value. 
+In `early_january_weather` dataset contains information on weather conditions. It contains some key variables, like year, month, hour, temperature, humid, pressure and time_hour value. The data set consists of `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns, and the The mean temperature in this dataset is `r mean(early_january_weather$temp)` degrees.
 
 ```{r}
 nrow(early_january_weather)
