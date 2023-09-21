@@ -52,6 +52,7 @@ AA_data_frame = tibble(
   vec_logical =  vec_numeric > 0,
   vec_factor = factor(c("1","2","3","4","5","6","7","8","9","10"))
 )
+AA_data_frame
 ```
 
 #pull
@@ -59,9 +60,11 @@ AA_data_frame = tibble(
 ```{r}
 library(tidyverse)
 AA_data_frame_mean = mean(pull(AA_data_frame, vec_numeric))
+
 vec_char_mean = mean(pull(AA_data_frame, vec_char))
 #This will cause error
 vec_logical_mean = mean(pull(AA_data_frame, vec_logical))
+
 vec_factor_mean = mean(pull(AA_data_frame, vec_factor))
 #This will cause error
 ```
@@ -70,6 +73,14 @@ So the mean in the `vec_numeric` and `vec_logical` is work and the other two wil
 
 #Convert logical to numeric
 ```{r}
-
+test_logical = as.numeric(AA_data_frame$vec_logical)
 ```
-
+#Covert character to numeric
+```{r}
+test_char = as.numeric(AA_data_frame$vec_char)
+```
+#Cover factor to numeric
+```{r}
+test_factor = as.numeric(AA_data_frame$vec_factor)
+```
+So the result show that `vec_logical` and `vec_factor` can convert to numeric. However, the `vec_char` could not convert to numeric. Because the function can't convert the letters to number,so the result show that `NA`.
