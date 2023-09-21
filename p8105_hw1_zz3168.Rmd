@@ -26,8 +26,6 @@ ncol(early_january_weather)
 mean(early_january_weather$temp)
 ```
 
-The data set consists of `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns, and the The mean temperature in this dataset is `r mean(early_january_weather$temp)` degrees.
-
 
 #Make a scatterplot
 ```{r}
